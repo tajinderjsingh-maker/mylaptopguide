@@ -45,7 +45,11 @@
   .btn{ display:inline-block; font-family:'Poppins',sans-serif; font-weight:600; font-size:15px; padding:14px 28px; border-radius:30px; background:var(--red); color:#fff; cursor:pointer; border:0; transition:transform .2s, box-shadow .2s; box-shadow:0 8px 22px rgba(232,35,46,.24); }
   .btn:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(232,35,46,.32); }
   .btn.dark{ background:var(--ink); box-shadow:0 8px 22px rgba(0,0,0,.18); }
-  .btn.ghost{ background:var(--wash); color:var(--ink); box-shadow:none; border:1px solid var(--hair); }
+  .btn.ghost{ background:#fff; color:var(--ink); box-shadow:0 6px 18px rgba(0,0,0,.08); border:1.5px solid var(--ink); }
+  .btn.ghost:hover{ background:var(--ink); color:#fff; box-shadow:0 10px 24px rgba(0,0,0,.18); }
+  .social-btn{ display:inline-flex; align-items:center; gap:9px; font-family:'Poppins',sans-serif; font-weight:600; font-size:14px; padding:11px 20px; border-radius:26px; background:#fff; color:var(--ink); border:1.5px solid var(--hair); transition:all .2s; }
+  .social-btn:hover{ border-color:var(--ink); box-shadow:0 8px 20px rgba(0,0,0,.08); }
+  .social-btn svg{ width:19px; height:19px; flex:0 0 19px; }
   .kicker{ display:inline-block; font-family:'Space Mono',monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--red); border:1px solid var(--red); border-radius:22px; padding:6px 14px; margin-bottom:22px; }
   h2.sec{ font-family:'Poppins',sans-serif; font-weight:700; font-size:clamp(30px,5vw,52px); line-height:1.03; letter-spacing:-.025em; }
   h2.sec .r{ color:var(--red); }
@@ -341,7 +345,7 @@
 <!-- ===================== INTERACTIVE COMPARISON ===================== -->
 <section id="compare">
   <div class="wrap">
-    <div class="reveal"><div class="kicker">Eight worth your money</div></div>
+    <div class="reveal"><div class="kicker">Twelve worth your money</div></div>
     <h2 class="sec reveal">Compare, your way<span class="r">.</span></h2>
     <p class="sec-lead reveal d1">Every machine here is a genuinely good buy in 2026 — no filler. Filter by what matters to you, then tap a laptop to see who it's for.</p>
     <div class="cmp-filters reveal d1" id="cmpFilters"></div>
@@ -403,8 +407,12 @@
           <div class="stat"><div class="n" data-to="1000" data-suffix="s">0</div><div class="l">Designers taught</div></div>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:26px;">
-          <a href="https://www.linkedin.com/in/tajinder-j-singh-34829735" target="_blank" rel="noopener" class="btn dark">Connect on LinkedIn ›</a>
-          <a href="https://www.instagram.com/aicreationlabs" target="_blank" rel="noopener" class="btn ghost">Instagram · @aicreationlabs ›</a>
+          <a href="https://www.linkedin.com/in/tajinder-j-singh-34829735" target="_blank" rel="noopener" class="social-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0A66C2" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn</a>
+          <a href="https://www.instagram.com/aicreationlab/" target="_blank" rel="noopener" class="social-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><path fill="url(#ig)" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.42.56.21.96.47 1.38.9.43.42.69.82.9 1.38.17.42.37 1.06.42 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.42 2.23-.21.56-.47.96-.9 1.38-.42.43-.82.69-1.38.9-.42.17-1.06.37-2.23.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.42-2.23.21-.56.47-.96.9-1.38.42-.43.82-.69 1.38-.9.42-.17 1.06-.37 2.23-.42C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56-.79.3-1.46.71-2.13 1.38C1.34 2.68.93 3.35.63 4.14c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.3.79.71 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56.79-.3 1.46-.71 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91-.3-.79-.71-1.46-1.38-2.13A5.92 5.92 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+            Instagram</a>
         </div>
       </div>
     </div>
@@ -426,7 +434,7 @@
         <a class="fl" href="#which">Which Is You?</a>
         <div class="fh" style="margin-top:20px;">Connect</div>
         <a class="fl" href="https://www.linkedin.com/in/tajinder-j-singh-34829735" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="fl" href="https://www.instagram.com/aicreationlabs" target="_blank" rel="noopener">Instagram · @aicreationlabs</a>
+        <a class="fl" href="https://www.instagram.com/aicreationlab/" target="_blank" rel="noopener">Instagram</a>
       </div>
       <div>
         <div class="fh">Method</div>
@@ -471,7 +479,19 @@
       chips:['~0.98 kg','100% AdobeRGB','2.8K OLED','Windows'], grad:'linear-gradient(140deg,#b79bff,#8fb2ff)', cats:['windows','oled','light'] },
     { id:'aspire', name:'Acer Aspire 5', tag:'Budget entry', price:'~₹45,000',
       text:"A deliberate starting point. Pair it with a 16GB RAM upgrade and it holds up for foundational 2D work. Average screen — calibrate it — but a real way in when budget is the hard limit.",
-      chips:['~₹45,000','Upgrade RAM','IPS FHD','Windows'], grad:'linear-gradient(140deg,#cfd6e6,#9aa6bd)', cats:['windows','budget'] }
+      chips:['~₹45,000','Upgrade RAM','IPS FHD','Windows'], grad:'linear-gradient(140deg,#cfd6e6,#9aa6bd)', cats:['windows','budget'] },
+    { id:'ideapad', name:'Lenovo IdeaPad Slim 5', tag:'Budget all-rounder', price:'~₹60,000',
+      text:"A dependable, affordable Windows all-rounder with 16GB RAM and a solid screen — a sensible step up from the cheapest laptops without spending OLED money. Good for foundational 2D work.",
+      chips:['16GB','Good value','Windows','Reliable'], grad:'linear-gradient(140deg,#d3ddef,#aebfd8)', cats:['windows','budget'] },
+    { id:'dell', name:'Dell XPS 13', tag:'Premium ultraportable', price:'~₹79,999',
+      text:"A gorgeous, compact aluminium ultraportable with an excellent display — lovely for graphic design and web on the move. Pick a 16GB / 512GB configuration; the 8GB base is tight for design.",
+      chips:['Compact','Premium build','Great screen','Windows'], grad:'linear-gradient(140deg,#8a94a6,#3a3f52)', cats:['windows'] },
+    { id:'omnibook', name:'HP OmniBook Ultra 14', tag:'Premium OLED · best battery', price:'~₹1,89,999',
+      text:"A flagship 3K OLED with up to ~22 hours of battery — stunning colour and endurance for designers who want a top-tier Windows machine. Beautiful, and priced accordingly.",
+      chips:['3K OLED','~22h battery','Ryzen AI','Windows'], grad:'linear-gradient(140deg,#7ea9ff,#c98bff)', cats:['windows','oled','creator'] },
+    { id:'proart', name:'ASUS ProArt P16', tag:'Ultimate creator · 3D & video', price:'~₹3,59,990',
+      text:"Desktop-class power for 3D, VFX, and long video — built for filmmakers, 3D modelers, and heavy AI workflows. Aspirational and expensive; only for serious creator work, not everyday 2D design.",
+      chips:['RTX graphics','4K OLED','Creator-grade','Windows'], grad:'linear-gradient(140deg,#2a2d3a,#0e0f16)', cats:['windows','creator'] }
   ];
   var filters = [
     { key:'all', label:'All laptops' }, { key:'apple', label:'Apple' }, { key:'windows', label:'Windows' },
