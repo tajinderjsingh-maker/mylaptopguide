@@ -1,32 +1,49 @@
-# ChatGPT Cheatcode Repository — TJS
+# FOUNDATION — Your First Design Laptop
 
-## v0.5 — Gemstone Color System / Visual Distinction
+An interactive field guide for young designers choosing their first laptop (India edition, 2026).
+By **Tajinder J Singh**.
 
-A GitHub Pages-ready custom prompt-operator library with **252 commands across 30 categories**.
+**Live site:** `https://<your-username>.github.io/<repo-name>/`
 
-### Visual update
-- Every category now has a distinct, enhanced gemstone-inspired color identity with stronger tints and accents.
-- Colored dots identify categories in the left filter.
-- Active filters gain a subtle tinted background and accent rail.
-- Every command card receives a very light category tint.
-- Category labels carry the stronger accent color.
-- Added a compact Color Key in the category panel.
-- Kept the friendly DM Sans + DM Mono typography.
-- Kept the warm paper / charcoal visual system and Cheatcode Lab.
+---
 
-### Important
-These slash codes are **custom conventions for prompting and workflow design**, not claims that every `/code` is an official ChatGPT slash command.
+## Publish this as a website (GitHub Pages) — 5 minutes
 
-### Public profiles
-Instagram: https://www.instagram.com/aicreationlab/
-LinkedIn: https://www.linkedin.com/in/tajinder-j-singh-34829735/
-Facebook: https://www.facebook.com/TajinderJSingh
+### Option A — Upload in the browser (no tools needed)
+1. Go to **github.com/new** and create a repository — e.g. `foundation-laptop-guide`. Set it **Public**. Don't add a README (this repo already has one). Click **Create repository**.
+2. On the repo page, click **Add file → Upload files**.
+3. Drag in **`index.html`**, this **`README.md`**, and the **`images/`** folder. Click **Commit changes**.
+4. Go to **Settings → Pages**. Under *Build and deployment*, set **Source: Deploy from a branch**, **Branch: `main`**, folder **`/ (root)`**. Save.
+5. Wait ~1 minute, then refresh — your live URL appears at the top of the Pages settings. Done.
 
-Designed and developed by Tajinder J Singh.
+### Option B — Command line (if you use git)
+```bash
+git init
+git add .
+git commit -m "FOUNDATION laptop guide — edition 01"
+git branch -M main
+git remote add origin https://github.com/<your-username>/foundation-laptop-guide.git
+git push -u origin main
+```
+Then enable Pages: **Settings → Pages → Deploy from a branch → main → / (root)**.
 
-### v0.5 visual update
-- Stronger gemstone category colors, approximately 20% toned down from saturated jewel tones.
-- More visible category washes in the sidebar and command cards.
-- Stronger active-category state and colored accent rail.
-- Category labels use soft colored pills for faster scanning.
-- Added `assets/color-direction-reference.png` as the supplied visual reference.
+---
+
+## Expanding it later (it's built to grow)
+
+- **Add real product photos:** drop images into `images/` using these names, and they appear automatically —
+  `review-air-hero.jpg`, `thumb-air.jpg`, `thumb-zenbook.jpg`, `thumb-yoga.jpg`, `thumb-pro.jpg`,
+  `thumb-aspire.jpg`, `thumb-air15.jpg`, `thumb-airm2.jpg`, `thumb-vivobook.jpg`.
+- **Add more laptops:** open `index.html`, find the `var laptops = [ ... ]` list, and copy a block. Give it an
+  `id`, `name`, `price`, `text`, `chips`, and `cats` (e.g. `['windows','oled','budget']`). It joins the filter
+  and comparison automatically.
+- **Add filter categories:** edit the `var filters = [ ... ]` list.
+- **Change the author photo:** replace `images/author-portrait.jpg` (the page also has one embedded as a fallback).
+
+## Files
+- `index.html` — the whole site (self-contained; animations via anime.js + Motion One from CDN).
+- `images/` — product photos and author portrait (add your own here).
+- `FOUNDATION_First_Proof_2026.pdf` — the print/PDF edition (optional to include).
+
+---
+© 2026 Tajinder J Singh · A FOUNDATION publication · Prices indicative (₹), verify before buying.

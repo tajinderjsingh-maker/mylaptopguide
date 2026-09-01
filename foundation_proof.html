@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FOUNDATION — Your First Design Laptop (Edition 01 · 2026)</title>
+<style>
+  :root{
+    --ink:#1d1d1f;
+    --paper:#ffffff;
+    --gray:#6e6e73;
+    --soft:#a1a1a6;
+    --hair:#d2d2d7;
+    --wash:#f5f5f7;
+    --red:#e8232e;
+    --green:#2fa35a;
+    --blue:#5b8def;
+  }
+  @page{ size:A4; margin:0; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{
+    font-family:'Lato','DejaVu Sans',sans-serif;
+    color:var(--ink); font-size:10pt; line-height:1.5;
+    background:#c9c9cc;
+  }
+  .disp{ font-family:'Poppins','Lato',sans-serif; }
+  .mono{ font-family:'Noto Sans Mono',monospace; }
+
+  .page{
+    width:210mm; height:297mm; background:var(--paper);
+    margin:0 auto; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; page-break-after:always;
+  }
+  .page:last-child{ page-break-after:auto; }
+
+  a{ color:inherit; text-decoration:none; }
+
+  /* ---- shared meta ---- */
+  .metabar{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:8mm 15mm 0;
+    font-family:'Noto Sans Mono',monospace; font-size:6.6pt;
+    letter-spacing:.22em; color:var(--soft); text-transform:uppercase;
+  }
+  .metabar .r{ color:var(--red); }
+  .body-pad{ padding:0 15mm; flex:1; display:flex; flex-direction:column; }
+
+  .kicker{
+    display:inline-block;
+    font-family:'Noto Sans Mono',monospace; font-size:6.8pt;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--red);
+    border:1pt solid var(--red); border-radius:20px; padding:1.6mm 3.2mm;
+    margin-bottom:5mm; align-self:flex-start;
+  }
+  h2.sec{
+    font-family:'Poppins',sans-serif; font-weight:700;
+    font-size:27pt; line-height:1.03; letter-spacing:-.02em; margin-bottom:4mm;
+  }
+  h2.sec .r{ color:var(--red); }
+  .lead{ font-size:12pt; line-height:1.55; color:#33343a; max-width:150mm; }
+  p.body{ font-size:9.6pt; line-height:1.62; color:#33343a; margin-bottom:3mm; }
+  p.body b{ font-weight:700; color:var(--ink); }
+
+  /* ---- nav bar + footer ---- */
+  .footwrap{ margin-top:auto; padding:0 15mm 8mm; }
+  .navbar{
+    display:flex; justify-content:space-between; align-items:center; gap:3mm;
+    padding-bottom:4mm; margin-bottom:3.5mm; border-bottom:.7pt solid var(--hair);
+  }
+  .navbtn{
+    font-family:'Poppins',sans-serif; font-weight:500; font-size:8pt;
+    letter-spacing:.01em; padding:2.4mm 5mm; border-radius:22px;
+    background:var(--wash); color:var(--ink); border:.7pt solid var(--hair);
+  }
+  .navbtn.home{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  .navbtn.ghost{ visibility:hidden; }
+  .foot{
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'Noto Sans Mono',monospace; font-size:6.4pt;
+    letter-spacing:.14em; color:var(--soft); text-transform:uppercase;
+  }
+  .foot .r{ color:var(--red); }
+
+  /* ---- pill / buttons / chips ---- */
+  .btn{
+    display:inline-block; font-family:'Poppins',sans-serif; font-weight:600;
+    font-size:8.4pt; padding:2.8mm 6mm; border-radius:24px;
+    background:var(--red); color:#fff; letter-spacing:.01em;
+  }
+  .btn.dark{ background:var(--ink); }
+  .btn.light{ background:var(--wash); color:var(--ink); border:.7pt solid var(--hair); }
+  .chip{
+    display:inline-block; font-family:'Noto Sans Mono',monospace; font-size:6.6pt;
+    letter-spacing:.06em; padding:1.2mm 2.6mm; border-radius:16px;
+    background:var(--wash); color:var(--ink); border:.6pt solid var(--hair);
+    margin:0 1mm 1.4mm 0;
+  }
+
+  /* ---- cards ---- */
+  .card{
+    background:var(--wash); border-radius:16px; padding:5mm 5.5mm;
+  }
+  .cards{ display:flex; flex-wrap:wrap; gap:4.5mm; margin-top:6mm; }
+  .cards .card{ width:calc(50% - 2.25mm); }
+  .card.full{ width:100%; }
+  .card .ico{ width:11mm; height:11mm; margin-bottom:2.5mm; }
+  .card .no{ font-family:'Noto Sans Mono',monospace; font-size:6.6pt; color:var(--red); letter-spacing:.12em; }
+  .card .t{ font-family:'Poppins',sans-serif; font-weight:600; font-size:12pt; margin:.6mm 0 2mm; }
+  .card p{ font-size:8.7pt; line-height:1.5; color:#3a3b41; }
+  .card .aim{
+    font-family:'Noto Sans Mono',monospace; font-size:7pt; letter-spacing:.04em;
+    color:var(--ink); margin-top:3mm; padding-top:2.5mm; border-top:.7pt solid var(--hair);
+    text-transform:uppercase;
+  }
+  .card .aim b{ color:var(--red); }
+
+  /* ---- scene band (fills sparse pages) ---- */
+  .scene-band{ margin-top:7mm; border-radius:20px; height:38mm; overflow:hidden;
+    background:linear-gradient(120deg,#fbe9e6 0%,#eef2fb 58%,#e9f3ee 100%); }
+  .scene-band.cool{ background:linear-gradient(120deg,#eaf0fb 0%,#f3ecfb 55%,#eafaf1 100%); }
+  .scene-band.warm{ background:linear-gradient(120deg,#fdeee6 0%,#fbe9ef 55%,#eef1fb 100%); }
+  .scene-band svg{ display:block; width:100%; height:38mm; }
+  .scene-cap{ font-family:'Noto Sans Mono',monospace; font-size:6.4pt; letter-spacing:.14em;
+    color:var(--soft); text-transform:uppercase; margin-top:2mm; text-align:center; }
+  /* mini device glyph in comparison header */
+  .thumb-svg{ display:block; width:15mm; height:auto; margin:0 auto 1.6mm; }
+
+  /* ---- COVER ---- */
+  .cover{ padding:0; }
+  .cover-top{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:11mm 15mm 0; font-family:'Noto Sans Mono',monospace; font-size:6.8pt;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--ink);
+  }
+  .cover-top .r{ color:var(--red); }
+  .cover-hero{
+    margin:7mm 12mm 0; border-radius:26px; height:118mm; overflow:hidden;
+    background:linear-gradient(135deg,#fbe9e6 0%,#eef2fb 46%,#e9f3ee 100%);
+  }
+  .cover-hero svg{ display:block; width:100%; height:118mm; }
+  .cover-mid{ padding:8mm 15mm 0; }
+  .cover h1{
+    font-family:'Poppins',sans-serif; font-weight:700; font-size:52pt;
+    line-height:.98; letter-spacing:-.035em;
+  }
+  .cover h1 .r{ color:var(--red); }
+  .cover .sub{ font-size:12pt; line-height:1.5; color:#3a3b41; max-width:140mm; margin-top:5mm; }
+  .cover .sub b{ font-weight:700; color:var(--ink); }
+  .cover-bottom{ display:flex; justify-content:space-between; align-items:flex-end; padding:6mm 15mm 12mm; }
+  .cover-bottom .by{ font-family:'Noto Sans Mono',monospace; font-size:7pt; letter-spacing:.1em; color:var(--gray); line-height:1.9; text-transform:uppercase; }
+  .cover-bottom .by b{ color:var(--ink); }
+
+  /* ---- note box ---- */
+  .note-box{ border-radius:14px; background:#fff5f4; border:.7pt solid #f6d5d2; padding:4.5mm 5mm; }
+  .note-box .h{ font-family:'Poppins',sans-serif; font-weight:600; font-size:9pt; margin-bottom:2mm; }
+  .note-box .h::before{ content:"● "; color:var(--red); font-size:7pt; }
+  .note-box p{ font-size:8.7pt; line-height:1.55; color:#3a3b41; }
+  .note-box p b{ color:var(--ink); }
+
+  .signature{ font-family:'Poppins',sans-serif; font-weight:600; font-size:12pt; margin-top:6mm; }
+  .signature .role{ font-family:'Noto Sans Mono',monospace; font-weight:400; font-size:7pt; letter-spacing:.12em; color:var(--gray); text-transform:uppercase; margin-top:1.4mm; }
+
+  /* ---- CONTENTS ---- */
+  .toc{ margin-top:2mm; }
+  .toc-row{ display:flex; align-items:center; padding:3.1mm 0; border-bottom:.7pt solid var(--hair); }
+  .toc-row:first-child{ border-top:.7pt solid var(--hair); }
+  .toc-num{ font-family:'Noto Sans Mono',monospace; font-size:7.6pt; color:var(--red); width:12mm; flex:0 0 12mm; }
+  .toc-title{ font-family:'Poppins',sans-serif; font-weight:500; font-size:12.5pt; letter-spacing:-.01em; }
+  .toc-desc{ font-size:8.3pt; color:var(--gray); margin-left:3mm; flex:1; }
+  .toc-pg{ font-family:'Noto Sans Mono',monospace; font-size:7.6pt; color:var(--soft); }
+  .toc-go{ font-family:'Poppins',sans-serif; font-weight:600; font-size:7.4pt; color:#fff; background:var(--ink); border-radius:16px; padding:1.4mm 3.4mm; margin-left:4mm; }
+
+  /* ---- FEATURED REVIEW ---- */
+  .rev-head{ display:flex; justify-content:space-between; align-items:center; }
+  .rev-head .name{ font-family:'Poppins',sans-serif; font-weight:700; font-size:23pt; line-height:1.02; letter-spacing:-.025em; }
+  .rev-head .name .r{ color:var(--red); }
+  .rev-head .tier{ font-family:'Noto Sans Mono',monospace; font-size:6.8pt; letter-spacing:.1em; color:var(--gray); text-transform:uppercase; text-align:right; line-height:1.7; }
+  .rev-head .tier b{ color:var(--red); font-size:9pt; letter-spacing:.14em; }
+  .verdict{ font-family:'Poppins',sans-serif; font-weight:500; font-size:13pt; line-height:1.4; margin:4mm 0; letter-spacing:-.01em; max-width:152mm; }
+  .verdict .r{ color:var(--red); }
+  .rev-grid{ display:flex; gap:7mm; }
+  .rev-main{ flex:1; }
+  .rev-side{ width:58mm; flex:0 0 58mm; }
+  .device-card{ background:linear-gradient(140deg,#eef2fb,#f7eeff); border-radius:16px; padding:5mm; text-align:center; }
+  .specbox{ border-radius:14px; background:var(--wash); padding:4mm 5mm; margin-top:4mm; }
+  .specbox .h{ font-family:'Noto Sans Mono',monospace; font-size:6.6pt; letter-spacing:.14em; color:var(--red); text-transform:uppercase; margin-bottom:2mm; }
+  .specrow{ display:flex; justify-content:space-between; font-size:8pt; padding:1.5mm 0; border-bottom:.6pt solid var(--hair); }
+  .specrow:last-child{ border-bottom:0; }
+  .specrow .k{ color:var(--gray); }
+  .specrow .v{ font-weight:700; text-align:right; }
+  /* meter bars */
+  .meter{ margin-top:2.4mm; }
+  .meter .row{ display:flex; align-items:center; gap:3mm; margin-bottom:1.8mm; }
+  .meter .lbl{ font-family:'Noto Sans Mono',monospace; font-size:6.6pt; letter-spacing:.06em; color:var(--gray); width:22mm; flex:0 0 22mm; text-transform:uppercase; }
+  .meter .track{ flex:1; height:2.4mm; border-radius:4px; background:#e6e6ea; overflow:hidden; }
+  .meter .fill{ display:block; height:2.4mm; border-radius:4px; background:var(--red); }
+  .plist{ margin-top:3mm; }
+  .plist .h{ font-family:'Noto Sans Mono',monospace; font-size:6.6pt; letter-spacing:.12em; text-transform:uppercase; margin-bottom:1.4mm; }
+  .plist.pro .h{ color:var(--green); }
+  .plist.con .h{ color:var(--red); }
+  .plist li{ list-style:none; font-size:8pt; line-height:1.45; padding-left:4mm; position:relative; margin-bottom:.9mm; color:#33343a; }
+  .plist.pro li::before{ content:"+"; position:absolute; left:0; color:var(--green); font-weight:700; }
+  .plist.con li::before{ content:"–"; position:absolute; left:0; color:var(--red); font-weight:700; }
+  .subh{ font-family:'Poppins',sans-serif; font-weight:600; font-size:10.5pt; margin:3.5mm 0 1.4mm; }
+
+  /* ---- COMPARISON ---- */
+  table.cmp{ width:100%; border-collapse:separate; border-spacing:0; margin-top:5mm; font-size:7.7pt; }
+  table.cmp th, table.cmp td{ text-align:left; padding:2.4mm 2.4mm; border-bottom:.7pt solid var(--hair); vertical-align:middle; }
+  table.cmp thead th{ font-family:'Poppins',sans-serif; font-weight:600; font-size:7.6pt; border-bottom:1.2pt solid var(--ink); }
+  table.cmp thead th .s{ display:block; font-family:'Noto Sans Mono',monospace; font-weight:400; font-size:6pt; color:var(--gray); letter-spacing:.04em; margin-top:.6mm; text-transform:uppercase; }
+  table.cmp tbody th{ font-family:'Noto Sans Mono',monospace; font-weight:500; font-size:6.8pt; letter-spacing:.06em; color:var(--gray); text-transform:uppercase; width:30mm; }
+  table.cmp .pickcol{ background:#fff5f4; }
+  table.cmp thead .pickcol{ background:#fff5f4; border-bottom-color:var(--red); }
+  .cmp-note{ font-size:7.4pt; color:var(--gray); margin-top:3mm; line-height:1.5; }
+
+  /* ---- TIERS ---- */
+  .tier{ display:flex; gap:6mm; align-items:center; padding:4mm 5mm; border-radius:16px; background:var(--wash); margin-bottom:3.5mm; }
+  .tier.hot{ background:#fff5f4; border:.7pt solid #f6d5d2; }
+  .tier .price{ width:38mm; flex:0 0 38mm; }
+  .tier .price .amt{ font-family:'Poppins',sans-serif; font-weight:700; font-size:19pt; line-height:1; letter-spacing:-.02em; }
+  .tier .price .amt .r{ color:var(--red); }
+  .tier .price .lab{ font-family:'Noto Sans Mono',monospace; font-size:6.6pt; letter-spacing:.1em; color:var(--gray); text-transform:uppercase; margin-top:2mm; }
+  .tier .desc .t{ font-family:'Poppins',sans-serif; font-weight:600; font-size:11pt; margin-bottom:1mm; }
+  .tier .desc p{ font-size:8.5pt; line-height:1.48; color:#3a3b41; }
+  .tier .desc .eg{ font-family:'Noto Sans Mono',monospace; font-size:7pt; color:var(--ink); margin-top:1.6mm; }
+  .tier .desc .eg b{ color:var(--red); }
+
+  /* ---- WHICH ONE ---- */
+  .pick-grid{ display:flex; flex-wrap:wrap; gap:4.5mm; margin-top:6mm; }
+  .pick{ width:calc(50% - 2.25mm); border-radius:16px; background:var(--wash); padding:4.5mm 5mm; }
+  .pick .disc{ font-family:'Poppins',sans-serif; font-weight:600; font-size:11pt; margin-bottom:1mm; }
+  .pick .who{ font-size:8.2pt; color:var(--gray); margin-bottom:2.6mm; line-height:1.42; }
+  .pick .rec{ font-family:'Noto Sans Mono',monospace; font-size:7.4pt; letter-spacing:.02em; color:var(--ink); border-top:.7pt solid var(--hair); padding-top:2.4mm; }
+  .pick .rec b{ color:var(--red); }
+
+  /* ---- AUTHOR ---- */
+  .auth-grid{ display:flex; gap:8mm; margin-top:5mm; }
+  .auth-l{ flex:1; }
+  .auth-r{ width:56mm; flex:0 0 56mm; }
+  .auth-name{ font-family:'Poppins',sans-serif; font-weight:700; font-size:19pt; line-height:1.05; letter-spacing:-.02em; }
+  .auth-name .r{ color:var(--red); }
+  .auth-role{ font-family:'Noto Sans Mono',monospace; font-size:7.2pt; letter-spacing:.08em; color:var(--red); text-transform:uppercase; margin:2mm 0 4mm; line-height:1.7; }
+  .auth-photo-wrap{ text-align:center; }
+  .auth-avatar{ width:34mm; height:34mm; object-fit:cover; border-radius:16px; }
+  .auth-stats{ margin-top:4mm; display:flex; flex-wrap:wrap; gap:3mm; }
+  .auth-stat{ width:calc(50% - 1.5mm); background:var(--wash); border-radius:12px; padding:3mm 3.5mm; }
+  .auth-stat .n{ font-family:'Poppins',sans-serif; font-weight:700; font-size:15pt; line-height:1; }
+  .auth-stat .n .r{ color:var(--red); }
+  .auth-stat .l{ font-family:'Noto Sans Mono',monospace; font-size:6.2pt; letter-spacing:.08em; color:var(--gray); text-transform:uppercase; margin-top:1.4mm; }
+  .auth-link{ font-family:'Noto Sans Mono',monospace; font-size:7.4pt; letter-spacing:.04em; color:var(--red); margin-top:4mm; }
+
+  /* ---- CREDITS ---- */
+  .col2{ display:flex; gap:8mm; margin-top:5mm; }
+  .col2 > div{ flex:1; }
+  .credit-h{ font-family:'Noto Sans Mono',monospace; font-size:6.6pt; letter-spacing:.14em; color:var(--red); text-transform:uppercase; margin-bottom:2.4mm; }
+  .credit-p{ font-size:8.5pt; line-height:1.55; color:#3a3b41; margin-bottom:3mm; }
+  .credit-p a{ color:var(--red); }
+  .src{ font-size:7.3pt; line-height:1.5; color:var(--gray); }
+  .endmark{ font-family:'Poppins',sans-serif; font-weight:700; font-size:32pt; letter-spacing:-.03em; margin-top:7mm; }
+  .endmark .r{ color:var(--red); }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 · COVER ================= -->
+<section class="page cover" id="cover">
+  <div class="cover-top">
+    <span>FOUNDATION<span class="r"> ·</span> A FIELD GUIDE FOR YOUNG DESIGNERS</span>
+    <span class="r">EDITION 01 · 2026</span>
+  </div>
+
+  <div class="cover-hero">
+    <!-- gradient mesh blobs -->
+    <svg width="100%" height="100%" viewBox="0 0 600 340" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="b1" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#ffd9d2"/><stop offset="100%" stop-color="#ffd9d2" stop-opacity="0"/></radialGradient>
+        <radialGradient id="b2" cx="80%" cy="20%" r="55%"><stop offset="0%" stop-color="#cfe0ff"/><stop offset="100%" stop-color="#cfe0ff" stop-opacity="0"/></radialGradient>
+        <radialGradient id="b3" cx="70%" cy="90%" r="60%"><stop offset="0%" stop-color="#d6f0df"/><stop offset="100%" stop-color="#d6f0df" stop-opacity="0"/></radialGradient>
+        <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ff6b5e"/><stop offset="45%" stop-color="#c86bff"/><stop offset="100%" stop-color="#5b8def"/>
+        </linearGradient>
+      </defs>
+      <rect width="600" height="340" fill="url(#b1)"/>
+      <rect width="600" height="340" fill="url(#b2)"/>
+      <rect width="600" height="340" fill="url(#b3)"/>
+      <!-- floating laptop -->
+      <g transform="translate(180,86)">
+        <rect x="0" y="0" width="240" height="150" rx="12" fill="#1d1d1f"/>
+        <rect x="9" y="9" width="222" height="132" rx="6" fill="url(#scr)"/>
+        <!-- canvas UI mock on screen -->
+        <rect x="22" y="22" width="70" height="46" rx="6" fill="#ffffff" opacity="0.92"/>
+        <rect x="22" y="76" width="70" height="46" rx="6" fill="#ffffff" opacity="0.55"/>
+        <rect x="104" y="22" width="105" height="100" rx="6" fill="#ffffff" opacity="0.82"/>
+        <circle cx="140" cy="60" r="18" fill="#ff6b5e" opacity="0.9"/>
+        <rect x="118" y="86" width="76" height="7" rx="3.5" fill="#1d1d1f" opacity="0.5"/>
+        <rect x="118" y="98" width="54" height="7" rx="3.5" fill="#1d1d1f" opacity="0.3"/>
+        <!-- base -->
+        <path d="M-26 150 L266 150 L286 178 Q286 182 282 182 L-42 182 Q-46 182 -46 178 Z" fill="#d7d7dd"/>
+        <rect x="98" y="150" width="44" height="7" rx="3.5" fill="#bcbcc4"/>
+      </g>
+      <!-- floating chips -->
+      <g font-family="Poppins, sans-serif" font-weight="600">
+        <g transform="translate(70,70)"><rect width="96" height="30" rx="15" fill="#fff"/><circle cx="18" cy="15" r="6" fill="#2fa35a"/><text x="32" y="19" font-size="11" fill="#1d1d1f">16GB RAM</text></g>
+        <g transform="translate(430,250)"><rect width="120" height="30" rx="15" fill="#fff"/><circle cx="18" cy="15" r="6" fill="#e8232e"/><text x="32" y="19" font-size="11" fill="#1d1d1f">100% colour</text></g>
+        <g transform="translate(56,250)"><rect width="104" height="30" rx="15" fill="#fff"/><circle cx="18" cy="15" r="6" fill="#5b8def"/><text x="32" y="19" font-size="11" fill="#1d1d1f">All-day</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="cover-mid">
+    <h1>Your First<br>Design Laptop<span class="r">.</span></h1>
+    <p class="sub">The machine you create on matters less than you think — and more than they tell you. A calm, honest guide to <b>choosing well the first time.</b></p>
+  </div>
+  <div class="cover-bottom">
+    <div class="by">Curated &amp; written by<br><b>Tajinder J Singh</b><br>Design Educator · Creative Technologist</div>
+    <a href="#contents" class="btn dark">Begin your journey ›</a>
+  </div>
+</section>
+
+<!-- ================= PAGE 2 · BEFORE WE BEGIN ================= -->
+<section class="page" id="intro">
+  <div class="metabar"><span>FOUNDATION · 01</span><span>BEFORE WE BEGIN</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">Before we begin</div>
+    <h2 class="sec">A tool, not<br>a talent<span class="r">.</span></h2>
+    <p class="lead" style="margin-bottom:6mm;">If you're reading this, you're probably about to spend more on one object than you ever have. That's a little frightening. It shouldn't be.</p>
+    <p class="body">A laptop will not make you a designer. Nothing you buy will. What a good machine does is quieter than that: it gets out of your way. It stops being a thing you fight — a spinning wheel, a dead battery, a screen that lies about colour — and becomes a thing you forget. That's the whole goal. Not the fastest. Not the most expensive. <b>The one you stop noticing, so you can notice your work instead.</b></p>
+    <p class="body">This guide is deliberately short. There are hundreds of laptops and a thousand reviews, most written for people who already know what they want. You don't need all that yet. You need the five things that actually matter, a handful of machines worth your money in 2026, and one confident decision. A longer, detailed edition waits for when you're ready to go deeper — but start here.</p>
+    <div class="note-box" style="margin-top:2mm;">
+      <div class="h">How to read this</div>
+      <p>Every price is indicative and in Indian Rupees (₹) — check current and <b>student / education</b> pricing, which is often meaningfully lower. Specs move fast; the reasoning behind them doesn't. Learn the "why" on page 04 and you can judge any laptop, this year or next.</p>
+    </div>
+    <div class="signature">Tajinder J Singh
+      <div class="role">Associate Professor · Pearl Academy · 24+ years teaching design</div>
+    </div>
+    <div class="scene-band cool">
+      <svg viewBox="0 0 620 150" preserveAspectRatio="xMidYMid slice">
+        <circle cx="80" cy="120" r="70" fill="#ffffff" opacity="0.35"/>
+        <circle cx="540" cy="20" r="60" fill="#ffffff" opacity="0.3"/>
+        <!-- desk laptop -->
+        <g transform="translate(250,34)">
+          <ellipse cx="65" cy="92" rx="78" ry="6" fill="#1d1d1f" opacity="0.10"/>
+          <rect x="8" y="6" width="114" height="74" rx="7" fill="#1d1d1f"/>
+          <rect x="13" y="11" width="104" height="64" rx="3" fill="#8fb2ff"/>
+          <rect x="21" y="20" width="30" height="22" rx="3" fill="#fff" opacity="0.9"/>
+          <rect x="21" y="46" width="30" height="20" rx="3" fill="#fff" opacity="0.5"/>
+          <rect x="57" y="20" width="52" height="46" rx="3" fill="#fff" opacity="0.85"/>
+          <circle cx="75" cy="36" r="8" fill="#ff6b5e"/>
+          <path d="M-6 80 L136 80 L146 92 L-16 92 Z" fill="#e2e2e8"/>
+        </g>
+        <!-- floating tool chips -->
+        <g font-family="Poppins, sans-serif" font-weight="600" font-size="11">
+          <g transform="translate(60,44)"><rect width="92" height="26" rx="13" fill="#fff"/><circle cx="16" cy="13" r="5" fill="#e8232e"/><text x="28" y="17" fill="#1d1d1f">Figma</text></g>
+          <g transform="translate(455,96)"><rect width="108" height="26" rx="13" fill="#fff"/><circle cx="16" cy="13" r="5" fill="#5b8def"/><text x="28" y="17" fill="#1d1d1f">Photoshop</text></g>
+          <g transform="translate(430,30)"><rect width="96" height="26" rx="13" fill="#fff"/><circle cx="16" cy="13" r="5" fill="#2fa35a"/><text x="28" y="17" fill="#1d1d1f">Illustrator</text></g>
+        </g>
+      </svg>
+    </div>
+    <div class="scene-cap">The tools get out of the way — so the work shows up</div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#cover" class="navbtn">‹ Cover</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#matters" class="navbtn">Next: What Matters ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>02</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 3 · CONTENTS ================= -->
+<section class="page" id="contents">
+  <div class="metabar"><span>FOUNDATION</span><span>CONTENTS</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">What's inside</div>
+    <h2 class="sec">Contents<span class="r">.</span></h2>
+    <div class="toc">
+      <a class="toc-row" href="#intro"><span class="toc-num">01</span><span class="toc-title">Before We Begin</span><span class="toc-desc">Why the machine matters less than you fear</span><span class="toc-pg">02</span><span class="toc-go">Go</span></a>
+      <a class="toc-row" href="#matters"><span class="toc-num">02</span><span class="toc-title">What Actually Matters</span><span class="toc-desc">The five specs that decide everything</span><span class="toc-pg">04</span><span class="toc-go">Go</span></a>
+      <a class="toc-row" href="#review"><span class="toc-num">03</span><span class="toc-title">The Featured Machine</span><span class="toc-desc">MacBook Air M4 — reviewed in full</span><span class="toc-pg">05</span><span class="toc-go">Go</span></a>
+      <a class="toc-row" href="#compare"><span class="toc-num">04</span><span class="toc-title">The Comparison</span><span class="toc-desc">Five laptops worth your money, side by side</span><span class="toc-pg">07</span><span class="toc-go">Go</span></a>
+      <a class="toc-row" href="#tiers"><span class="toc-num">05</span><span class="toc-title">What Your Budget Buys</span><span class="toc-desc">Starter, sweet spot, and pro</span><span class="toc-pg">08</span><span class="toc-go">Go</span></a>
+      <a class="toc-row" href="#parents"><span class="toc-num">06</span><span class="toc-title">A Note For Parents</span><span class="toc-desc">Where to spend, where not to</span><span class="toc-pg">09</span><span class="toc-go">Go</span></a>
+      <a class="toc-row" href="#which"><span class="toc-num">07</span><span class="toc-title">Which One Is You?</span><span class="toc-desc">Pick by what you actually make</span><span class="toc-pg">10</span><span class="toc-go">Go</span></a>
+      <a class="toc-row" href="#author"><span class="toc-num">08</span><span class="toc-title">About the Author</span><span class="toc-desc">Who wrote this, and why trust it</span><span class="toc-pg">11</span><span class="toc-go">Go</span></a>
+      <a class="toc-row" href="#credits"><span class="toc-num">09</span><span class="toc-title">Colophon &amp; Sources</span><span class="toc-desc">How this guide was made</span><span class="toc-pg">12</span><span class="toc-go">Go</span></a>
+    </div>
+    <p class="body" style="margin-top:7mm; color:var(--gray); font-size:8.5pt;">This is a First Proof — a review copy of the FOUNDATION edition. Tap any row to jump to its page; every page has a nav bar to move around. Photography, extended reviews, and regional pricing arrive in the full edition.</p>
+    <div class="scene-band warm" style="margin-top:auto; margin-bottom:2mm;">
+      <svg viewBox="0 0 620 150" preserveAspectRatio="xMidYMid slice">
+        <circle cx="70" cy="30" r="58" fill="#ffffff" opacity="0.32"/>
+        <circle cx="560" cy="120" r="70" fill="#ffffff" opacity="0.3"/>
+        <!-- fanned page cards -->
+        <g transform="translate(230,26)">
+          <rect x="0" y="14" width="150" height="96" rx="10" fill="#fff" opacity="0.55" transform="rotate(-8 75 62)"/>
+          <rect x="20" y="10" width="150" height="96" rx="10" fill="#fff" opacity="0.8" transform="rotate(-2 95 58)"/>
+          <rect x="42" y="6" width="150" height="96" rx="10" fill="#fff"/>
+          <rect x="56" y="20" width="60" height="9" rx="4.5" fill="#1d1d1f"/>
+          <rect x="56" y="36" width="120" height="6" rx="3" fill="#1d1d1f" opacity="0.25"/>
+          <rect x="56" y="48" width="104" height="6" rx="3" fill="#1d1d1f" opacity="0.25"/>
+          <circle cx="66" cy="78" r="8" fill="#e8232e"/><rect x="80" y="74" width="90" height="8" rx="4" fill="#5b8def" opacity="0.7"/>
+        </g>
+        <g font-family="Poppins, sans-serif" font-weight="600" font-size="11">
+          <g transform="translate(70,96)"><rect width="120" height="26" rx="13" fill="#fff"/><text x="16" y="17" fill="#1d1d1f">9 chapters</text></g>
+          <g transform="translate(470,34)"><rect width="104" height="26" rx="13" fill="#fff"/><text x="16" y="17" fill="#1d1d1f">12 pages</text></g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#intro" class="navbtn">‹ Before We Begin</a>
+      <a href="#cover" class="navbtn home">Cover</a>
+      <a href="#matters" class="navbtn">Next: What Matters ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>03</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 4 · WHAT MATTERS ================= -->
+<section class="page" id="matters">
+  <div class="metabar"><span>FOUNDATION · 02</span><span>WHAT ACTUALLY MATTERS</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">The five that matter</div>
+    <h2 class="sec">Learn these,<br>ignore the rest<span class="r">.</span></h2>
+    <p class="body" style="max-width:150mm;">Spec sheets are built to overwhelm you. Almost all of it is noise. For design work, five things decide whether a laptop serves you or fights you. Understand them once and you can judge any machine.</p>
+    <div class="cards">
+      <div class="card">
+        <svg class="ico" viewBox="0 0 40 40" fill="none"><rect x="4" y="6" width="32" height="22" rx="3" stroke="#e8232e" stroke-width="2.4"/><rect x="9" y="11" width="14" height="12" rx="2" fill="#e8232e" opacity="0.18"/><path d="M14 33h12M20 28v5" stroke="#1d1d1f" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <div class="no">01 — DISPLAY &amp; COLOUR</div>
+        <div class="t">The screen is the work</div>
+        <p>You'll stare at it for years and trust it to tell the truth about colour. The red you pick must be the red that prints. Good OLED and IPS both do this; cheap panels do not.</p>
+        <div class="aim">AIM FOR <b>100% sRGB</b> · ideally P3 · 400+ nits</div>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 40 40" fill="none"><rect x="7" y="12" width="26" height="16" rx="2" stroke="#e8232e" stroke-width="2.4"/><path d="M12 12V7M20 12V7M28 12V7M12 33v-5M20 33v-5M28 33v-5" stroke="#1d1d1f" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <div class="no">02 — MEMORY (RAM)</div>
+        <div class="t">Room to think</div>
+        <p>RAM is how many things your machine holds in its head at once — layers, tabs, a design app and a browser of references. Too little and everything crawls. The upgrade most worth paying for.</p>
+        <div class="aim">AIM FOR <b>16GB</b> minimum · 8GB only for light work</div>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 40 40" fill="none"><rect x="10" y="10" width="20" height="20" rx="3" stroke="#e8232e" stroke-width="2.4"/><rect x="16" y="16" width="8" height="8" rx="1.5" fill="#e8232e" opacity="0.3"/><path d="M15 10V5M25 10V5M15 35v-5M25 35v-5M10 15H5M10 25H5M35 15h-5M35 25h-5" stroke="#1d1d1f" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <div class="no">03 — CHIP (PERFORMANCE)</div>
+        <div class="t">Quiet speed</div>
+        <p>The chip sets how fast — and how silently — work happens. Apple's M-series and modern Core Ultra / Ryzen AI chips are all fast enough for design. Battery and heat matter more day-to-day than benchmark numbers.</p>
+        <div class="aim">AIM FOR <b>Apple M-series</b> · or Core Ultra / Ryzen AI</div>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 40 40" fill="none"><rect x="7" y="9" width="26" height="8" rx="2" stroke="#e8232e" stroke-width="2.4"/><rect x="7" y="23" width="26" height="8" rx="2" stroke="#1d1d1f" stroke-width="2.4"/><circle cx="12" cy="13" r="1.6" fill="#e8232e"/><circle cx="12" cy="27" r="1.6" fill="#1d1d1f"/></svg>
+        <div class="no">04 — STORAGE</div>
+        <div class="t">Where it all lives</div>
+        <p>Design files are large and multiply fast. 256GB fills within a year; 512GB is the honest starting point. You usually can't upgrade this later on modern laptops, so buy enough now.</p>
+        <div class="aim">AIM FOR <b>512GB SSD</b> · 256GB is tight</div>
+      </div>
+      <div class="card full" style="display:flex; gap:5mm; align-items:center;">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" style="flex:0 0 11mm;"><rect x="5" y="13" width="26" height="14" rx="3" stroke="#e8232e" stroke-width="2.4"/><rect x="33" y="17" width="3" height="6" rx="1.5" fill="#1d1d1f"/><path d="M18 16l-4 6h5l-4 6" stroke="#e8232e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <div class="no">05 — BATTERY &amp; WEIGHT</div>
+          <div class="t" style="margin-top:.4mm;">The one you'll actually carry</div>
+          <p>A design laptop lives in a bag. If it's heavy or dies by lunch, you'll leave it at home — and the best laptop is the one you have with you. Modern efficient chips made all-day battery normal; don't settle for less. Aim for something under ~1.6kg that lasts a full day of classes.</p>
+        </div>
+        <div class="aim" style="border:0; border-left:.7pt solid var(--hair); padding:0 0 0 4mm; margin:0; flex:0 0 32mm;">AIM FOR<br><b>12+ hours</b> real use<br>under ~1.6kg</div>
+      </div>
+    </div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#contents" class="navbtn">‹ Contents</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#review" class="navbtn">Next: The Review ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>04</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 5 · FEATURED REVIEW ================= -->
+<section class="page" id="review">
+  <div class="metabar"><span>FOUNDATION · 03</span><span class="r">THE FEATURED MACHINE</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="rev-head">
+      <div class="name">MacBook Air <span class="r">M4</span><br>13-inch</div>
+      <div class="tier">OUR PICK FOR MOST<br><b>★★★★★</b><br>FROM ₹99,900 · ₹89,900 EDU</div>
+    </div>
+    <div class="verdict">The one to beat. For most design students the M4 Air is the <span class="r">right answer</span> — silent, light, colour-true, and fast enough that you'll outgrow your skills long before the machine.</div>
+    <div class="rev-grid">
+      <div class="rev-main">
+        <p class="body">Apple's 2025 refresh did the two things that mattered and left the rest alone. It put the fast, efficient M4 chip inside the thinnest mainstream laptop worth owning, and — quietly the bigger news — made <b>16GB of memory the starting point</b>, not a paid upgrade. That single change is why this is the default: the old advice of "buy the Air but pay to double the RAM" is simply gone.</p>
+        <p class="body">There's no fan. Under a heavy Photoshop file or a long export it stays silent and cool, where cheaper machines whir and throttle. The 13.6-inch Liquid Retina display is sharp and colour-accurate enough to trust for real work, and battery clears a full day of classes. It's deliberately a little boring — and that's the point. It disappears, and your work appears.</p>
+        <div class="subh">Where it's brilliant</div>
+        <p class="body">Graphic design, UI/UX, illustration, photography, branding, web — the whole 2D creative curriculum runs beautifully. The machine most young designers should stop worrying about and just buy.</p>
+        <div class="rev-grid" style="gap:6mm; margin-top:2mm;">
+          <ul class="plist pro"><div class="h">WHAT WE LOVE</div><li>16GB RAM as standard — finally</li><li>Silent, fanless, stays cool</li><li>Genuinely all-day battery</li><li>Light enough to always carry</li></ul>
+          <ul class="plist con"><div class="h">KEEP IN MIND</div><li>256GB base storage is tight</li><li>Only two USB-C ports</li><li>Not built for heavy 3D / video</li><li>macOS, if you're Windows-loyal</li></ul>
+        </div>
+      </div>
+      <div class="rev-side">
+        <div class="device-card">
+          <svg width="100%" viewBox="0 0 260 168">
+            <defs>
+              <linearGradient id="s2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8fb2ff"/><stop offset="55%" stop-color="#b79bff"/><stop offset="100%" stop-color="#ff9d8f"/></linearGradient>
+              <linearGradient id="gloss2" x1="0" y1="0" x2="0.5" y2="1"><stop offset="0%" stop-color="#ffffff" stop-opacity="0.34"/><stop offset="42%" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+              <linearGradient id="base2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e9e9ee"/><stop offset="100%" stop-color="#cfcfd6"/></linearGradient>
+            </defs>
+            <ellipse cx="130" cy="156" rx="118" ry="9" fill="#1d1d1f" opacity="0.10"/>
+            <!-- lid -->
+            <rect x="30" y="8" width="200" height="128" rx="12" fill="#1d1d1f"/>
+            <rect x="38" y="16" width="184" height="112" rx="6" fill="url(#s2)"/>
+            <!-- toolbar -->
+            <circle cx="48" cy="26" r="2.4" fill="#fff" opacity="0.85"/><circle cx="56" cy="26" r="2.4" fill="#fff" opacity="0.6"/><circle cx="64" cy="26" r="2.4" fill="#fff" opacity="0.4"/>
+            <!-- panels + canvas -->
+            <rect x="46" y="36" width="52" height="38" rx="5" fill="#fff" opacity="0.92"/>
+            <rect x="46" y="80" width="52" height="40" rx="5" fill="#fff" opacity="0.55"/>
+            <rect x="106" y="36" width="108" height="84" rx="5" fill="#fff" opacity="0.85"/>
+            <circle cx="140" cy="66" r="15" fill="#ff6b5e"/>
+            <rect x="122" y="90" width="78" height="6" rx="3" fill="#1d1d1f" opacity="0.45"/>
+            <rect x="122" y="101" width="52" height="6" rx="3" fill="#1d1d1f" opacity="0.28"/>
+            <rect x="54" y="44" width="34" height="5" rx="2.5" fill="#5b8def" opacity="0.8"/>
+            <rect x="54" y="53" width="26" height="5" rx="2.5" fill="#1d1d1f" opacity="0.25"/>
+            <!-- gloss -->
+            <rect x="38" y="16" width="184" height="112" rx="6" fill="url(#gloss2)"/>
+            <!-- base -->
+            <path d="M8 136 L252 136 L266 156 Q266 158 264 158 L-4 158 Q-6 158 -6 156 Z" fill="url(#base2)"/>
+            <rect x="112" y="136" width="36" height="6" rx="3" fill="#bcbcc4"/>
+          </svg>
+          <div class="mono" style="font-size:6.4pt; letter-spacing:.1em; color:var(--gray); margin-top:.5mm; text-transform:uppercase;">Illustration · your photo drops in here</div>
+        </div>
+        <div class="specbox">
+          <div class="h">HOW IT SCORES</div>
+          <div class="meter">
+            <div class="row"><span class="lbl">Display</span><span class="track"><span class="fill" style="width:88%;"></span></span></div>
+            <div class="row"><span class="lbl">Performance</span><span class="track"><span class="fill" style="width:80%;"></span></span></div>
+            <div class="row"><span class="lbl">Portability</span><span class="track"><span class="fill" style="width:96%;"></span></span></div>
+            <div class="row"><span class="lbl">Value</span><span class="track"><span class="fill" style="width:92%;"></span></span></div>
+          </div>
+        </div>
+        <div class="specbox">
+          <div class="h">SPECS THAT MATTER</div>
+          <div class="specrow"><span class="k">Chip</span><span class="v">Apple M4, 10-core</span></div>
+          <div class="specrow"><span class="k">Memory</span><span class="v">16GB (base)</span></div>
+          <div class="specrow"><span class="k">Storage</span><span class="v">256GB → 512GB</span></div>
+          <div class="specrow"><span class="k">Display</span><span class="v">13.6" Retina, P3</span></div>
+          <div class="specrow"><span class="k">Battery</span><span class="v">Up to ~18 hrs</span></div>
+          <div class="specrow"><span class="k">Weight</span><span class="v">1.24 kg</span></div>
+        </div>
+        <a href="#compare" class="btn light" style="display:block; text-align:center; margin-top:4mm;">See it compared ›</a>
+      </div>
+    </div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#matters" class="navbtn">‹ What Matters</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#review2" class="navbtn">Next: Alternatives ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>05</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 6 · ALTERNATIVES ================= -->
+<section class="page" id="review2">
+  <div class="metabar"><span>FOUNDATION · 03</span><span>THE FEATURED MACHINE, CONTINUED</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">The two honest alternatives</div>
+    <h2 class="sec">If the Air<br>isn't you<span class="r">.</span></h2>
+    <p class="body" style="max-width:150mm;">The Air is the default, not the only answer. Two machines earn a real place beside it — one for colour obsessives, one for the heavy lifters.</p>
+    <div class="cards" style="margin-top:6mm; align-items:flex-start;">
+      <div class="card">
+        <div style="background:#fff; border-radius:12px; padding:2mm; margin-bottom:2.5mm;">
+          <svg viewBox="0 0 240 108" preserveAspectRatio="xMidYMid meet" style="display:block; width:100%; height:22mm;">
+            <defs><linearGradient id="zg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff5e8a"/><stop offset="50%" stop-color="#a15bff"/><stop offset="100%" stop-color="#2fd0c8"/></linearGradient><linearGradient id="zgl" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff" stop-opacity="0.32"/><stop offset="42%" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+            <ellipse cx="120" cy="100" rx="98" ry="6" fill="#1d1d1f" opacity="0.09"/>
+            <rect x="40" y="6" width="160" height="82" rx="8" fill="#26262b"/>
+            <rect x="46" y="12" width="148" height="70" rx="4" fill="url(#zg)"/>
+            <rect x="54" y="20" width="40" height="26" rx="3" fill="#fff" opacity="0.9"/>
+            <rect x="54" y="50" width="40" height="24" rx="3" fill="#fff" opacity="0.5"/>
+            <rect x="100" y="20" width="86" height="54" rx="3" fill="#fff" opacity="0.85"/>
+            <circle cx="128" cy="40" r="10" fill="#ff5e8a"/>
+            <rect x="46" y="12" width="148" height="70" rx="4" fill="url(#zgl)"/>
+            <path d="M22 88 L218 88 L230 100 L10 100 Z" fill="#d9d9df"/>
+          </svg>
+        </div>
+        <div class="rev-head" style="align-items:flex-start;">
+          <div class="name" style="font-size:15pt;">ASUS Zenbook<br>14 OLED</div>
+          <div class="tier">BEST COLOUR<br><b style="font-size:11pt;">~₹1,15,990</b></div>
+        </div>
+        <p style="margin-top:3mm;">If your eye lives for colour and contrast, the Windows answer is a Zenbook 14. Its 2.8K 120Hz OLED panel is punchy, factory-calibrated, and covers 100% of DCI-P3 — a screen that flatters your work and tells the truth about it. More ports than the Air, and Windows, for a similar price. The trade: OLED sips more battery, and it's not fanless.</p>
+        <div style="margin-top:3mm;"><span class="chip">100% DCI-P3</span><span class="chip">2.8K · 120Hz</span><span class="chip">Windows</span></div>
+      </div>
+      <div class="card">
+        <div style="background:#fff; border-radius:12px; padding:2mm; margin-bottom:2.5mm;">
+          <svg viewBox="0 0 240 108" preserveAspectRatio="xMidYMid meet" style="display:block; width:100%; height:22mm;">
+            <defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3a3f52"/><stop offset="100%" stop-color="#11131c"/></linearGradient><linearGradient id="pgl" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff" stop-opacity="0.22"/><stop offset="45%" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+            <ellipse cx="120" cy="100" rx="98" ry="6" fill="#1d1d1f" opacity="0.09"/>
+            <rect x="36" y="6" width="168" height="82" rx="8" fill="#1d1d1f"/>
+            <rect x="42" y="12" width="156" height="70" rx="4" fill="url(#pg)"/>
+            <rect x="52" y="22" width="60" height="52" rx="3" fill="#fff" opacity="0.12"/>
+            <rect x="120" y="22" width="66" height="24" rx="3" fill="#ff6b5e" opacity="0.85"/>
+            <rect x="120" y="50" width="66" height="24" rx="3" fill="#5b8def" opacity="0.7"/>
+            <rect x="58" y="30" width="46" height="5" rx="2.5" fill="#fff" opacity="0.5"/>
+            <rect x="58" y="42" width="38" height="5" rx="2.5" fill="#fff" opacity="0.35"/>
+            <rect x="42" y="12" width="156" height="70" rx="4" fill="url(#pgl)"/>
+            <path d="M18 88 L222 88 L234 100 L6 100 Z" fill="#cccdd4"/>
+          </svg>
+        </div>
+        <div class="rev-head" style="align-items:flex-start;">
+          <div class="name" style="font-size:15pt;">MacBook Pro<br>14 · M4</div>
+          <div class="tier">FOR HEAVY WORK<br><b style="font-size:11pt;">~₹1,69,900</b></div>
+        </div>
+        <p style="margin-top:3mm;">The moment your work turns to 3D, motion, or long video timelines, the Pro earns its price. Active cooling holds full speed under sustained load instead of throttling, the mini-LED display is brighter with true HDR, and you gain the ports (HDMI, SD, MagSafe) heavier workflows lean on. Overkill for pure 2D — essential once renders enter your life.</p>
+        <div style="margin-top:3mm;"><span class="chip">mini-LED HDR</span><span class="chip">Active cooling</span><span class="chip">Pro ports</span></div>
+      </div>
+    </div>
+    <div class="note-box" style="margin-top:5mm;">
+      <div class="h">The one-line rule</div>
+      <p>Do most of your work in <b>Photoshop, Illustrator, Figma, or a browser?</b> Buy the Air. Live inside a <b>colour-critical OLED</b>? Zenbook. Spend your nights <b>rendering 3D or cutting video?</b> Pro. Almost everyone reading this is the first case.</p>
+    </div>
+    <a href="#compare" class="btn" style="margin-top:4mm; align-self:flex-start;">Now see all five compared ›</a>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#review" class="navbtn">‹ The Review</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#compare" class="navbtn">Next: Comparison ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>06</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 7 · COMPARISON ================= -->
+<section class="page" id="compare">
+  <div class="metabar"><span>FOUNDATION · 04</span><span class="r">THE COMPARISON</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">Five worth your money</div>
+    <h2 class="sec">Side by side<span class="r">.</span></h2>
+    <p class="body" style="max-width:150mm;">Every machine here is a genuinely good buy in 2026 — no filler. Find your budget and discipline, and the choice narrows fast. The highlighted column is our overall pick.</p>
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th style="width:30mm;"></th>
+          <th class="pickcol">MacBook Air M4<span class="s">Our pick ★</span></th>
+          <th>Zenbook 14 OLED<span class="s">Best colour</span></th>
+          <th>Yoga Slim 7i Aura<span class="s">Lightest</span></th>
+          <th>MacBook Pro 14<span class="s">Heavy work</span></th>
+          <th>Acer Aspire 5<span class="s">Budget</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th>From (₹)</th><td class="pickcol">₹99,900 · ₹89,900 edu</td><td>~₹1,15,990</td><td>~₹75,000</td><td>~₹1,69,900</td><td>~₹45,000</td></tr>
+        <tr><th>Display</th><td class="pickcol">13.6" Retina P3</td><td>14" 2.8K OLED 120Hz</td><td>14" 2.8K OLED 120Hz</td><td>14" mini-LED HDR</td><td>14–15" IPS FHD</td></tr>
+        <tr><th>Colour</th><td class="pickcol">Excellent</td><td>100% P3</td><td>100% AdobeRGB</td><td>Reference-grade</td><td>Fair — calibrate</td></tr>
+        <tr><th>Memory</th><td class="pickcol">16GB</td><td>16GB</td><td>16GB</td><td>16GB</td><td>8GB → upgrade</td></tr>
+        <tr><th>Weight</th><td class="pickcol">1.24 kg</td><td>~1.2 kg</td><td>~0.98 kg</td><td>1.55 kg</td><td>~1.6 kg</td></tr>
+        <tr><th>Battery</th><td class="pickcol">All day ~18h</td><td>Good</td><td>Very good</td><td>All day</td><td>Average</td></tr>
+        <tr><th>Fanless</th><td class="pickcol">Yes</td><td>No</td><td>No</td><td>No (cooled)</td><td>No</td></tr>
+        <tr><th>Platform</th><td class="pickcol">macOS</td><td>Windows</td><td>Windows</td><td>macOS</td><td>Windows</td></tr>
+      </tbody>
+    </table>
+    <p class="cmp-note">Prices are indicative India street pricing (₹) and move constantly — always check current and student / education pricing. Configurations vary; specs shown are representative base or common builds. The Aspire 5 is a deliberate budget entry point: pair it with a 16GB RAM upgrade and it holds up for foundational 2D work.</p>
+    <div style="margin-top:6mm;">
+      <div class="mono" style="font-size:6.8pt; letter-spacing:.14em; color:var(--red); text-transform:uppercase; margin-bottom:2.5mm;">MORE TO CONSIDER — SAME SHORTLIST, MORE CHOICE</div>
+      <div style="display:flex; gap:4mm;">
+        <div style="flex:1; background:var(--wash); border-radius:12px; padding:3.5mm 4mm;">
+          <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:9.2pt;">MacBook Air M4 · 15"</div>
+          <div class="mono" style="font-size:6.8pt; color:var(--red); margin:1mm 0 1.5mm;">~₹1,24,900 · MORE SCREEN</div>
+          <div style="font-size:7.7pt; color:#3a3b41; line-height:1.42;">A roomier 15-inch canvas for layout and timelines — same silent, fanless Air.</div>
+        </div>
+        <div style="flex:1; background:var(--wash); border-radius:12px; padding:3.5mm 4mm;">
+          <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:9.2pt;">MacBook Air M2 · 13"</div>
+          <div class="mono" style="font-size:6.8pt; color:var(--red); margin:1mm 0 1.5mm;">~₹83,990 · BUDGET APPLE</div>
+          <div style="font-size:7.7pt; color:#3a3b41; line-height:1.42;">The cheapest way into macOS. Great for 2D; 256GB fills fast and M4 is quicker.</div>
+        </div>
+        <div style="flex:1; background:var(--wash); border-radius:12px; padding:3.5mm 4mm;">
+          <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:9.2pt;">ASUS Vivobook S14 OLED</div>
+          <div class="mono" style="font-size:6.8pt; color:var(--red); margin:1mm 0 1.5mm;">~₹80,000 · VALUE OLED</div>
+          <div style="font-size:7.7pt; color:#3a3b41; line-height:1.42;">A true colour-accurate OLED with 16GB at a student price — the smart budget screen.</div>
+        </div>
+      </div>
+    </div>
+    <p class="mono" style="font-size:6.6pt; color:var(--gray); margin-top:3mm; line-height:1.65;">ALSO WORTH A LOOK — Lenovo IdeaPad Slim 5 (~₹60,000) · Dell XPS 13, pick 16GB (~₹79,999) · HP OmniBook Ultra 14 OLED (~₹1,89,999) · ASUS ProArt P16 for heavy 3D &amp; video (~₹3,59,990). The full interactive comparison of all 12 lives on the web edition.</p>
+    <div style="display:flex; gap:3mm; margin-top:4mm;">
+      <a href="#tiers" class="btn light">What each budget buys ›</a>
+      <a href="#which" class="btn light">Which one is you? ›</a>
+    </div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#review2" class="navbtn">‹ Alternatives</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#tiers" class="navbtn">Next: Budget ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>07</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 8 · TIERS ================= -->
+<section class="page" id="tiers">
+  <div class="metabar"><span>FOUNDATION · 05</span><span>WHAT YOUR BUDGET BUYS</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">Three honest tiers</div>
+    <h2 class="sec">What your<br>budget buys<span class="r">.</span></h2>
+    <p class="body" style="max-width:150mm;">There's a good machine at every budget — the trick is knowing what each level honestly gets you, and what it doesn't.</p>
+    <div style="margin-top:5mm;">
+      <div class="tier">
+        <div class="price"><div class="amt">₹40K<span class="r">–60K</span></div><div class="lab">THE STARTER</div></div>
+        <div class="desc">
+          <div class="t">Enough to begin, not to grow into</div>
+          <p>A solid entry for foundational 2D work — sketching ideas, learning tools, coursework. Expect to add RAM, live with an average screen, and upgrade sooner. Real if budget is the hard limit; not a four-year machine.</p>
+          <div class="eg">e.g. <b>Acer Aspire 5</b> (upgrade to 16GB RAM)</div>
+        </div>
+      </div>
+      <div class="tier hot">
+        <div class="price"><div class="amt">₹90K<span class="r">–1.2L</span></div><div class="lab">THE SWEET SPOT ★</div></div>
+        <div class="desc">
+          <div class="t">Where nearly everyone should land</div>
+          <p>The best value in the whole guide. Silent or colour-perfect, 16GB standard, all-day battery, a screen you can trust, and enough performance to last your entire course and beyond. If you can reach this tier, do — it pays you back.</p>
+          <div class="eg">e.g. <b>MacBook Air M4</b> · <b>Zenbook 14 OLED</b></div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="price"><div class="amt">₹1.6L<span class="r">+</span></div><div class="lab">THE PRO</div></div>
+        <div class="desc">
+          <div class="t">Only if the work demands it</div>
+          <p>Buy up here for a reason, not for reassurance. Sustained power for 3D, motion, and video; reference displays; more ports. If your work is 2D design, this money is better kept for a tablet, drive, or simply saved. Let the work pull you here.</p>
+          <div class="eg">e.g. <b>MacBook Pro 14 · M4</b> · pro Windows OLED</div>
+        </div>
+      </div>
+    </div>
+    <div class="note-box" style="margin-top:5mm;">
+      <div class="h">If you remember one thing</div>
+      <p>Spend to reach the <b>sweet spot</b>, then stop. Extra money is almost always better spent on <b>more storage and RAM</b> than on a fancier tier you won't use.</p>
+    </div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#compare" class="navbtn">‹ Comparison</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#parents" class="navbtn">Next: For Parents ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>08</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 9 · PARENTS ================= -->
+<section class="page" id="parents">
+  <div class="metabar"><span>FOUNDATION · 06</span><span>A NOTE FOR PARENTS</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">For the person paying</div>
+    <h2 class="sec">A note for<br>parents<span class="r">.</span></h2>
+    <p class="lead" style="margin-bottom:6mm;">You're likely funding this, and you want it to be money well spent. Here's the honest version, without the sales talk.</p>
+    <div class="cards">
+      <div class="card"><div class="no" style="color:var(--green);">✓ WORTH PAYING FOR</div><div class="t">Memory &amp; storage</div><p>These can't be upgraded later on most modern laptops, and they're what make a machine last four years instead of two. 16GB RAM and 512GB storage is the difference between "still fine in final year" and "replaced it early."</p></div>
+      <div class="card"><div class="no" style="color:var(--green);">✓ WORTH PAYING FOR</div><div class="t">A screen that's honest</div><p>A design student trusts the screen to show true colour. A good display isn't a luxury here — it's the tool itself. The one place a cheap laptop quietly hurts the work.</p></div>
+      <div class="card"><div class="no">✕ DON'T OVERSPEND ON</div><div class="t">Top-tier "Pro" power</div><p>Unless your child specifically does heavy 3D or video, the most expensive machines are overkill. A mid-tier laptop serves a design foundation completely. Save the difference.</p></div>
+      <div class="card"><div class="no">✕ DON'T OVERSPEND ON</div><div class="t">The newest release, on impulse</div><p>Last year's sweet-spot machine at a discount often beats this year's base model at full price. And always ask about <b>student / education pricing</b> — it's real and often saves a chunk.</p></div>
+    </div>
+    <div class="note-box" style="margin-top:5mm;">
+      <div class="h">The reassurance</div>
+      <p>You don't need to understand laptops to buy well. Land your child in the <b>sweet spot</b> (page 08) with <b>16GB memory and 512GB storage</b> and you've done it right. That single sentence is the whole job.</p>
+    </div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#tiers" class="navbtn">‹ Budget</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#which" class="navbtn">Next: Which Is You? ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>09</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 10 · WHICH ONE IS YOU ================= -->
+<section class="page" id="which">
+  <div class="metabar"><span>FOUNDATION · 07</span><span>WHICH ONE IS YOU?</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">Pick by what you make</div>
+    <h2 class="sec">Which one<br>is you?<span class="r">.</span></h2>
+    <p class="body" style="max-width:150mm;">The right laptop depends less on your budget than on what you actually create. Find yourself below.</p>
+    <div class="pick-grid">
+      <div class="pick"><div class="disc">Graphic &amp; UI / UX design</div><div class="who">Layouts, branding, interfaces, type. You live in Figma, Illustrator, InDesign.</div><div class="rec">BUY → <b>MacBook Air M4</b>. Built for exactly this.</div></div>
+      <div class="pick"><div class="disc">Illustration &amp; digital art</div><div class="who">Drawing, painting, comics. Colour fidelity and a comfortable screen matter most.</div><div class="rec">BUY → <b>Zenbook 14 OLED</b> or Air + a tablet.</div></div>
+      <div class="pick"><div class="disc">3D, motion &amp; VFX</div><div class="who">Blender, After Effects, real-time scenes. You need sustained power and cooling.</div><div class="rec">BUY → <b>MacBook Pro 14</b> or a pro Windows machine.</div></div>
+      <div class="pick"><div class="disc">Photography &amp; video</div><div class="who">Lightroom, Premiere, long timelines. Colour, storage, and endurance rule.</div><div class="rec">BUY → <b>Air</b> for photo · <b>Pro 14</b> for serious video.</div></div>
+      <div class="pick"><div class="disc">Still exploring / foundation</div><div class="who">Trying everything, not sure yet. You want flexible and forgiving.</div><div class="rec">BUY → <b>MacBook Air M4</b> — the safest all-rounder.</div></div>
+      <div class="pick"><div class="disc">Budget is the hard limit</div><div class="who">The number can't move. Start now, upgrade later.</div><div class="rec">BUY → <b>Acer Aspire 5</b> + 16GB RAM upgrade.</div></div>
+    </div>
+    <div class="scene-band" style="margin-top:auto; margin-bottom:2mm;">
+      <svg viewBox="0 0 620 150" preserveAspectRatio="xMidYMid slice">
+        <circle cx="90" cy="120" r="66" fill="#ffffff" opacity="0.33"/>
+        <circle cx="545" cy="26" r="58" fill="#ffffff" opacity="0.3"/>
+        <g font-family="Poppins, sans-serif" font-weight="600" font-size="12" text-anchor="middle">
+          <g transform="translate(60,52)"><rect width="130" height="46" rx="14" fill="#fff"/><circle cx="26" cy="23" r="9" fill="#e8232e"/><text x="82" y="27" fill="#1d1d1f" font-size="11">Graphic</text></g>
+          <g transform="translate(210,86)"><rect width="130" height="46" rx="14" fill="#fff"/><circle cx="26" cy="23" r="9" fill="#5b8def"/><text x="82" y="27" fill="#1d1d1f" font-size="11">Illustration</text></g>
+          <g transform="translate(360,40)"><rect width="120" height="46" rx="14" fill="#fff"/><circle cx="26" cy="23" r="9" fill="#2fa35a"/><text x="78" y="27" fill="#1d1d1f" font-size="11">3D · Motion</text></g>
+          <g transform="translate(500,92)"><rect width="104" height="46" rx="14" fill="#fff"/><circle cx="24" cy="23" r="9" fill="#c99bff"/><text x="68" y="27" fill="#1d1d1f" font-size="11">Photo</text></g>
+        </g>
+      </svg>
+    </div>
+    <div class="scene-cap">Whatever you make, there's a right machine for it</div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#parents" class="navbtn">‹ For Parents</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#author" class="navbtn">Next: The Author ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>10</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 11 · AUTHOR ================= -->
+<section class="page" id="author">
+  <div class="metabar"><span>FOUNDATION · 08</span><span class="r">ABOUT THE AUTHOR</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">Who wrote this</div>
+    <div class="auth-grid">
+      <div class="auth-l">
+        <div class="auth-name">Tajinder<br>J Singh<span class="r">.</span></div>
+        <div class="auth-role">AI Evangelist · Creative Technologist · Design Educator</div>
+        <p class="body">Tajinder J Singh has spent <b>24+ years running two careers in parallel</b> — teaching digital design by day and shipping CGI and real-time broadcast graphics by night. He's an Associate Professor in Communication, Film &amp; Gaming at Pearl Academy, Delhi, where he founded the Immersive Studio and built creative coding, web, and XR into the design curriculum.</p>
+        <p class="body">He has authored degree syllabi for multiple institutions, mentored student teams that shipped working AI applications, and worked on everything from live election broadcasts to national sporting events. He writes this guide from one belief, tested over two decades in the classroom: <b>tools should serve the maker, never the other way around.</b></p>
+        <div class="auth-link">→ linkedin.com/in/tajinder-j-singh-34829735<br>→ instagram.com/aicreationlab</div>
+      </div>
+      <div class="auth-r">
+        <div class="auth-photo-wrap"><img class="auth-avatar" src="data:image/jpeg;base64,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" alt="Tajinder J Singh"></div>
+        <div class="auth-stats">
+          <div class="auth-stat"><div class="n">24<span class="r">+</span></div><div class="l">Years teaching &amp; making</div></div>
+          <div class="auth-stat"><div class="n">5</div><div class="l">Institutions' syllabi</div></div>
+          <div class="auth-stat"><div class="n">100<span class="r">+</span></div><div class="l">Live broadcasts</div></div>
+          <div class="auth-stat"><div class="n">1000s</div><div class="l">Designers taught</div></div>
+        </div>
+        <div class="note-box" style="margin-top:4mm;">
+          <div class="h">Why trust this guide</div>
+          <p>Not sponsored, no affiliate placements. Every pick is chosen the way it would be for a student walking into office hours: honestly, for their work and their budget.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#which" class="navbtn">‹ Which Is You?</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#credits" class="navbtn">Next: Colophon ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>11</span></div>
+  </div>
+</section>
+
+<!-- ================= PAGE 12 · CREDITS ================= -->
+<section class="page" id="credits">
+  <div class="metabar"><span>FOUNDATION · 09</span><span>COLOPHON &amp; SOURCES</span></div>
+  <div class="body-pad" style="padding-top:12mm;">
+    <div class="kicker">How this was made</div>
+    <h2 class="sec">Colophon<span class="r">.</span></h2>
+    <div class="col2">
+      <div>
+        <div class="credit-h">THE EDITION</div>
+        <p class="credit-p"><b>FOUNDATION</b> — a field guide for young designers.<br>Edition 01 · 2026 · First Proof (review copy).<br>Curated, written &amp; designed by Tajinder J Singh.</p>
+        <div class="credit-h">METHOD</div>
+        <p class="credit-p">Picks are chosen for design students specifically — weighting display colour, memory, silence, weight, and battery over raw benchmarks. Recommendations reflect machines available and sensibly priced in mid-2026. Prices are indicative and regional; verify current and education pricing before buying.</p>
+        <div class="credit-h">TYPE &amp; DESIGN</div>
+        <p class="credit-p">Set in Poppins, Lato, and Noto Sans Mono. Apple-HIG editorial system with original vector illustrations, built to read like an annual publication.</p>
+      </div>
+      <div>
+        <div class="credit-h">WHAT'S NEXT</div>
+        <p class="credit-p">The full edition adds photography, extended hands-on reviews, more machines across every budget, region-specific pricing, and a companion responsive web version — published and hosted openly on GitHub.</p>
+        <div class="credit-h">SELECTED SOURCES</div>
+        <p class="src">Apple Newsroom — MacBook Air M4 (2025)<br>RTINGS — Best Laptops for Graphic Design (2026)<br>Tom's Hardware — MacBook Air (M4, 2025) review<br>Notebookcheck &amp; TechNerdo — Best OLED laptops 2026<br>Linearity / XPPen — laptops for design students<br>Manufacturer spec sheets — Apple, ASUS, Lenovo, Acer</p>
+        <div class="credit-h" style="margin-top:4mm;">CONTACT</div>
+        <p class="credit-p"><a href="https://www.linkedin.com/in/tajinder-j-singh-34829735">linkedin.com/in/tajinder-j-singh-34829735</a><br><a href="https://www.instagram.com/aicreationlab">instagram.com/aicreationlab</a></p>
+      </div>
+    </div>
+    <div class="endmark">FOUNDATION<span class="r">.</span></div>
+    <p class="src" style="margin-top:1mm;">© 2026 Tajinder J Singh. A FOUNDATION publication. Indicative pricing; verify before purchase.</p>
+  </div>
+  <div class="footwrap">
+    <div class="navbar">
+      <a href="#author" class="navbtn">‹ The Author</a>
+      <a href="#contents" class="navbtn home">Contents</a>
+      <a href="#cover" class="navbtn">Back to Cover ›</a>
+    </div>
+    <div class="foot"><span>FOUNDATION</span><span class="r">FOUNDATION EDITION · 2026</span><span>12</span></div>
+  </div>
+</section>
+
+</body>
+</html>
