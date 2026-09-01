@@ -1,0 +1,1893 @@
+{
+  "title": "ChatGPT Cheatcode Repository",
+  "version": "0.2-design-expansion",
+  "note": "Curated custom prompt-operator vocabulary. These slash codes are user-defined conventions, not official ChatGPT slash commands unless explicitly supported by the product.",
+  "categories": [
+    {
+      "name": "Core & Control",
+      "slug": "core"
+    },
+    {
+      "name": "Visual Thinking",
+      "slug": "visual"
+    },
+    {
+      "name": "Views & Camera",
+      "slug": "camera"
+    },
+    {
+      "name": "Reveal & Structure",
+      "slug": "reveal"
+    },
+    {
+      "name": "3D & Spatial",
+      "slug": "spatial"
+    },
+    {
+      "name": "Data Visualization",
+      "slug": "data"
+    },
+    {
+      "name": "Data Analysis",
+      "slug": "analysis"
+    },
+    {
+      "name": "Time & Evolution",
+      "slug": "time"
+    },
+    {
+      "name": "Futures & Foresight",
+      "slug": "future"
+    },
+    {
+      "name": "Creative Thinking",
+      "slug": "creative"
+    },
+    {
+      "name": "Creative Provocation",
+      "slug": "provoke"
+    },
+    {
+      "name": "Design Deconstruction",
+      "slug": "design"
+    },
+    {
+      "name": "UX & Product",
+      "slug": "ux"
+    },
+    {
+      "name": "Service Design",
+      "slug": "service"
+    },
+    {
+      "name": "Research",
+      "slug": "research"
+    },
+    {
+      "name": "Strategy & Business",
+      "slug": "strategy"
+    },
+    {
+      "name": "Decision & Problem Solving",
+      "slug": "decision"
+    },
+    {
+      "name": "Systems Thinking",
+      "slug": "systems"
+    },
+    {
+      "name": "Teaching & Learning",
+      "slug": "teaching"
+    },
+    {
+      "name": "Assessment & Feedback",
+      "slug": "assessment"
+    },
+    {
+      "name": "Content & Instagram",
+      "slug": "content"
+    },
+    {
+      "name": "Writing & Communication",
+      "slug": "writing"
+    },
+    {
+      "name": "AI & Future Tech",
+      "slug": "ai"
+    },
+    {
+      "name": "Fashion & Design Futures",
+      "slug": "fashion"
+    },
+    {
+      "name": "Career & Curriculum",
+      "slug": "career"
+    },
+    {
+      "name": "Portfolio & Profile",
+      "slug": "portfolio"
+    },
+    {
+      "name": "Presentation & Storytelling",
+      "slug": "presentation"
+    },
+    {
+      "name": "Quality & Critical Thinking",
+      "slug": "quality"
+    },
+    {
+      "name": "Meta & Advanced",
+      "slug": "meta"
+    },
+    {
+      "name": "Official ChatGPT",
+      "slug": "official"
+    }
+  ],
+  "items": [
+    {
+      "cmd": "/search",
+      "category": "Official ChatGPT",
+      "slug": "official",
+      "description": "Use ChatGPT Search when current web information or sources are needed.",
+      "official": true
+    },
+    {
+      "cmd": "/canvas",
+      "category": "Official ChatGPT",
+      "slug": "official",
+      "description": "Open a Canvas workspace for drafting, coding or iterative editing when available.",
+      "official": true
+    },
+    {
+      "cmd": "/deepresearch",
+      "category": "Official ChatGPT",
+      "slug": "official",
+      "description": "Use Deep Research for multi-source, in-depth research when available.",
+      "official": true
+    },
+    {
+      "cmd": "/xray",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Reveal hidden structure, assumptions, relationships, mechanisms and implications.",
+      "official": false
+    },
+    {
+      "cmd": "/visualize",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Turn the idea into a clear visual representation or visual thinking structure.",
+      "official": false
+    },
+    {
+      "cmd": "/diagram",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Represent the subject as a clear diagram with labeled relationships.",
+      "official": false
+    },
+    {
+      "cmd": "/infographic",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Condense the information into a scannable, visual information hierarchy.",
+      "official": false
+    },
+    {
+      "cmd": "/visualsummary",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a visualsummary lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/visualmap",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a visualmap lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/conceptmap",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Map concepts and the relationships between them.",
+      "official": false
+    },
+    {
+      "cmd": "/mindmap",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Expand a central idea into related branches and subtopics.",
+      "official": false
+    },
+    {
+      "cmd": "/systemmap",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Map actors, inputs, processes, outputs, dependencies and feedback loops.",
+      "official": false
+    },
+    {
+      "cmd": "/framework",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Organize the subject into a reusable conceptual framework.",
+      "official": false
+    },
+    {
+      "cmd": "/model",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a model lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/schema",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a schema lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/matrix",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a matrix lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/hierarchy",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a hierarchy lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/flow",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a flow lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/process",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a process lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/cycle",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a cycle lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/ecosystem",
+      "category": "Visual Thinking",
+      "slug": "visual",
+      "description": "Apply a ecosystem lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/birdseye",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "View the subject from above to reveal spatial relationships and composition.",
+      "official": false
+    },
+    {
+      "cmd": "/topview",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a topview lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/aerial",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a aerial lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/frontview",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a frontview lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/sideview",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a sideview lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/threequarter",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a threequarter lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/isometric",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Represent the subject with an isometric spatial view.",
+      "official": false
+    },
+    {
+      "cmd": "/perspective",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a perspective lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/orthographic",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a orthographic lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/wideangle",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a wideangle lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/closeup",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a closeup lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/macro",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a macro lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/microscopic",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Zoom into the smallest meaningful details and reveal normally hidden information.",
+      "official": false
+    },
+    {
+      "cmd": "/zoomout",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a zoomout lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/zoomin",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a zoomin lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/pointofview",
+      "category": "Views & Camera",
+      "slug": "camera",
+      "description": "Apply a pointofview lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/cutaway",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Remove or slice away outer layers to expose internal structure.",
+      "official": false
+    },
+    {
+      "cmd": "/crosssection",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Show the subject as a sectional slice through its internal layers.",
+      "official": false
+    },
+    {
+      "cmd": "/explodedview",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Separate an object or system into components while preserving their relationships.",
+      "official": false
+    },
+    {
+      "cmd": "/deconstruct",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Break the subject into fundamental parts and explain how they work together.",
+      "official": false
+    },
+    {
+      "cmd": "/unwrap",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a unwrap lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/transparent",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a transparent lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/layered",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a layered lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/internal",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a internal lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/hidden",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a hidden lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/insideout",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a insideout lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/anatomy",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a anatomy lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/mechanism",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a mechanism lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/assembly",
+      "category": "Reveal & Structure",
+      "slug": "reveal",
+      "description": "Apply a assembly lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/3d",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a 3d lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/wireframe",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a wireframe lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/mesh",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a mesh lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/surface",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a surface lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/texture",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a texture lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/material",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a material lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/scale",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a scale lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/proportion",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a proportion lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/section",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a section lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/plan",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a plan lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/elevation",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a elevation lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/axonometric",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a axonometric lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/parametric",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a parametric lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/spatial",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a spatial lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/geometry",
+      "category": "3D & Spatial",
+      "slug": "spatial",
+      "description": "Apply a geometry lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/dataviz",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a dataviz lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/chart",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a chart lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/bargraph",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a bargraph lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/linegraph",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a linegraph lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/scatterplot",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a scatterplot lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/bubble",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a bubble lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/radar",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a radar lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/heatmap",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Show where intensity, attention, activity, risk or importance is high or low.",
+      "official": false
+    },
+    {
+      "cmd": "/treemap",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a treemap lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/sankey",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a sankey lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/network",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Show entities as nodes and their relationships as connections.",
+      "official": false
+    },
+    {
+      "cmd": "/histogram",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a histogram lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/boxplot",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a boxplot lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/funnel",
+      "category": "Data Visualization",
+      "slug": "data",
+      "description": "Apply a funnel lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/patterns",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a patterns lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/trends",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a trends lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/outliers",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a outliers lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/anomalies",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a anomalies lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/correlation",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a correlation lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/causality",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a causality lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/distribution",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a distribution lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/segmentation",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a segmentation lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/clusters",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a clusters lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/ranking",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a ranking lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/forecast",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a forecast lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/probability",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a probability lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/uncertainty",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Apply a uncertainty lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/benchmark",
+      "category": "Data Analysis",
+      "slug": "analysis",
+      "description": "Compare against relevant standards, competitors, precedents or best practices.",
+      "official": false
+    },
+    {
+      "cmd": "/timeline",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a timeline lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/thenvsnow",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Compare the same subject across time and highlight what changed.",
+      "official": false
+    },
+    {
+      "cmd": "/beforeafter",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a beforeafter lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/evolution",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a evolution lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/progression",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a progression lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/transformation",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a transformation lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/history",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a history lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/lifecycle",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a lifecycle lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/trajectory",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a trajectory lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/roadmap",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a roadmap lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/future",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Project the subject into plausible future states, opportunities and risks.",
+      "official": false
+    },
+    {
+      "cmd": "/next",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a next lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/2030",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a  → 030 lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/2040",
+      "category": "Time & Evolution",
+      "slug": "time",
+      "description": "Apply a  → 040 lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/2050",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a  → 050 lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/futures",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a futures lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/scenario",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a scenario lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/scenarios",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a scenarios lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/projection",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a projection lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/emerging",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a emerging lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/nextwave",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a nextwave lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/disruption",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a disruption lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/weaksignals",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a weaksignals lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/opportunity",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a opportunity lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/threat",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a threat lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/wildcard",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a wildcard lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/tippingpoint",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a tippingpoint lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/cascade",
+      "category": "Futures & Foresight",
+      "slug": "future",
+      "description": "Apply a cascade lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/brainstorm",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Generate a broad range of ideas before narrowing down.",
+      "official": false
+    },
+    {
+      "cmd": "/ideate",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a ideate lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/diverge",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Expand the solution space; prioritize variety over selection.",
+      "official": false
+    },
+    {
+      "cmd": "/converge",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Narrow options using explicit criteria and select the strongest directions.",
+      "official": false
+    },
+    {
+      "cmd": "/remix",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a remix lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/recombine",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a recombine lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/reframe",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a reframe lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/rethink",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a rethink lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/reinvent",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a reinvent lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/reimagine",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a reimagine lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/transform",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a transform lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/morph",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a morph lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/hybrid",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a hybrid lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/crosspollinate",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a crosspollinate lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/randomize",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a randomize lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/surprise",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a surprise lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/unexpected",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a unexpected lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/outofthebox",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a outofthebox lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/leftfield",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a leftfield lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/noboring",
+      "category": "Creative Thinking",
+      "slug": "creative",
+      "description": "Apply a noboring lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/whatif",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Change a key assumption and explore the consequences.",
+      "official": false
+    },
+    {
+      "cmd": "/invert",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Reverse a normal assumption, workflow or perspective and explore the result.",
+      "official": false
+    },
+    {
+      "cmd": "/opposite",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a opposite lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/reverse",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a reverse lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/exaggerate",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a exaggerate lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/minimize",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a minimize lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/maximize",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a maximize lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/subtract",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a subtract lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/add",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a add lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/replace",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a replace lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/combine",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a combine lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/distort",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a distort lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/abstract",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a abstract lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/absurd",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a absurd lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/provocation",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a provocation lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/challenge",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a challenge lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/contrarian",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a contrarian lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/paradox",
+      "category": "Creative Provocation",
+      "slug": "provoke",
+      "description": "Apply a paradox lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/designcrit",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a designcrit lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/brutalcrit",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Give direct, unsugar-coated criticism with concrete fixes.",
+      "official": false
+    },
+    {
+      "cmd": "/facultycrit",
+      "category": "Assessment & Feedback",
+      "slug": "assessment",
+      "description": "Critique as an experienced design educator, focusing on concept, process and learning.",
+      "official": false
+    },
+    {
+      "cmd": "/clientcrit",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a clientcrit lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/usercrit",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a usercrit lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/technicalcrit",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a technicalcrit lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/portfolioCrit",
+      "category": "Assessment & Feedback",
+      "slug": "assessment",
+      "description": "Apply a portfolioCrit lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/designsystem",
+      "category": "Design Deconstruction",
+      "slug": "design",
+      "description": "Apply a designsystem lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/visualsystem",
+      "category": "Design Deconstruction",
+      "slug": "design",
+      "description": "Apply a visualsystem lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/brand",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a brand lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/styleguide",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a styleguide lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/designlanguage",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a designlanguage lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/components",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a components lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/grid",
+      "category": "Design Deconstruction",
+      "slug": "design",
+      "description": "Apply a grid lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/layout",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a layout lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/spacing",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a spacing lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/typography",
+      "category": "Design Deconstruction",
+      "slug": "design",
+      "description": "Apply a typography lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/iconography",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a iconography lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/motion",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a motion lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/ux",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a ux lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/ui",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a ui lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/userflow",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a userflow lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/userjourney",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a userjourney lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/taskflow",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a taskflow lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/informationarchitecture",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a informationarchitecture lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/prototype",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a prototype lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/interface",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a interface lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/navigation",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a navigation lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/touchpoints",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a touchpoints lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/painpoints",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a painpoints lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/friction",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a friction lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/onboarding",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a onboarding lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/checkout",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a checkout lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/usability",
+      "category": "UX & Product",
+      "slug": "ux",
+      "description": "Apply a usability lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/accessibility",
+      "category": "Meta & Advanced",
+      "slug": "meta",
+      "description": "Apply a accessibility lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/service",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a service lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/serviceblueprint",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a serviceblueprint lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/frontstage",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a frontstage lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/backstage",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a backstage lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/actors",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a actors lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/stakeholders",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a stakeholders lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/moments",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a moments lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/failurepoints",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a failurepoints lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/dependencies",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a dependencies lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/research",
+      "category": "Research",
+      "slug": "research",
+      "description": "Investigate the topic using credible evidence and distinguish facts from inference.",
+      "official": false
+    },
+    {
+      "cmd": "/literature",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a literature lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/casestudy",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a casestudy lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/precedents",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a precedents lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/landscape",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a landscape lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/industry",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a industry lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/market",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a market lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/competitors",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a competitors lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/evidence",
+      "category": "Service Design",
+      "slug": "service",
+      "description": "Apply a evidence lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/sources",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a sources lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/references",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a references lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/question",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a question lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/hypothesis",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a hypothesis lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/methodology",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a methodology lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/findings",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a findings lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/gaps",
+      "category": "Research",
+      "slug": "research",
+      "description": "Apply a gaps lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/strategy",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a strategy lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/businessmodel",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a businessmodel lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/businessmodelcanvas",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a businessmodelcanvas lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/valuechain",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a valuechain lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/positioning",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a positioning lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/differentiation",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a differentiation lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/swot",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a swot lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/pestle",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a pestle lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/porter",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a porter lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/impacteffort",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a impacteffort lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/rice",
+      "category": "Strategy & Business",
+      "slug": "strategy",
+      "description": "Apply a rice lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/decide",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a decide lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/recommend",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a recommend lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/prioritize",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a prioritize lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/rank",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a rank lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/score",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a score lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/criteria",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a criteria lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/tradeoffs",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a tradeoffs lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/risks",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a risks lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/upside",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a upside lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/downside",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a downside lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/quickwins",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a quickwins lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/problem",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a problem lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/rootcause",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a rootcause lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/5whys",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a 5whys lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/fishbone",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a fishbone lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/bottleneck",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a bottleneck lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/solution",
+      "category": "Decision & Problem Solving",
+      "slug": "decision",
+      "description": "Apply a solution lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/teach",
+      "category": "Teaching & Learning",
+      "slug": "teaching",
+      "description": "Explain progressively with concepts, examples, practice and checks for understanding.",
+      "official": false
+    },
+    {
+      "cmd": "/explain",
+      "category": "Teaching & Learning",
+      "slug": "teaching",
+      "description": "Apply a explain lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/lesson",
+      "category": "Teaching & Learning",
+      "slug": "teaching",
+      "description": "Apply a lesson lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/tutorial",
+      "category": "Teaching & Learning",
+      "slug": "teaching",
+      "description": "Apply a tutorial lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    },
+    {
+      "cmd": "/workshop",
+      "category": "Teaching & Learning",
+      "slug": "teaching",
+      "description": "Apply a workshop lens or transformation to the subject; make the result explicit and useful.",
+      "official": false
+    }
+  ]
+}
